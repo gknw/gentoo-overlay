@@ -4,7 +4,7 @@
 
 EAPI=7
 
-inherit git-r3 cmake-utils
+inherit git-r3 cmake
 
 DESCRIPTION="KeePassX is a password manager, based on \`keepass\` codebase"
 HOMEPAGE="https://www.keepassx.org/"
@@ -33,5 +33,5 @@ src_configure() {
 	local mycmakeargs=(
 			-DWITH_TESTS="$(usex test)"
 	)
-	cmake-utils_src_configure
+	cmake_src_configure
 }
